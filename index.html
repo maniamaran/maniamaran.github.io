@@ -1,96 +1,399 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>மணி அமரன்</title>
+<title>மணி அமரன் | எழுத்தாளர் • கவிஞர்</title>
+
+<meta name="description"
+content="மணி அமரன் அவர்களின் அதிகாரப்பூர்வ இணையதளம். கதைகள், கவிதைகள், கட்டுரைகள், புத்தகங்கள் மற்றும் விமர்சனங்கள்.">
+
+<meta name="keywords"
+content="மணி அமரன், Mani Amaran, தமிழ் எழுத்தாளர், தமிழ் கவிதைகள், கதைகள்">
+
+<meta name="author"
+content="மணி அமரன்">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#1e3c72,#2a5298);
-color:white;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Noto Serif Tamil',serif;
+
+background:
+linear-gradient(
+135deg,
+#07162e 0%,
+#0d2d59 50%,
+#07162e 100%
+);
+
+color:#ffffff;
+
+min-height:100vh;
+
+overflow-x:hidden;
+
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}background-attachment: fixed;
+
+}
+
+header{
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+z-index:1000;
+
+background:rgba(7,22,46,.78);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,215,0,.25);
+
+}
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.logo img{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+box-shadow:0 0 15px rgba(255,215,0,.45);
+
+}
+
+.logo span{
+
+font-size:1.2rem;
+
+font-weight:700;
+
+letter-spacing:2px;
+
+color:#ffd700;
+
+}
+
+nav{
+
+display:flex;
+
+gap:24px;
+
+}
+
+nav a{
+
+color:#ffffff;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ffd700;
+
+    }
+    .hero{
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
 text-align:center;
+
+padding:120px 20px 60px;
+
 }
 
-.hero{
-padding:70px 20px;
+.hero h1{
+
+font-size:3.3rem;
+
+font-weight:700;
+
+color:#ffffff;
+
+margin-bottom:15px;
+
+text-shadow:0 0 15px rgba(255,255,255,.25);
+
 }
 
-h1{
-    font-size:42px;
-    font-weight:700;
-    color:white;
-    margin-bottom:10px;
-    white-space:nowrap;
+.hero p{
+
+font-size:1.3rem;
+
+color:#d8d8d8;
+
+margin-bottom:20px;
+
+letter-spacing:2px;
+
 }
-h2{
-    font-size:28px;
-    font-weight:400;
-    margin-top:8px;
-    color:#e8e8e8;
+
+.divider{
+
+width:120px;
+
+height:3px;
+
+background:#ffd700;
+
+border-radius:10px;
+
+margin:20px auto 35px;
+
+box-shadow:0 0 12px rgba(255,215,0,.7);
+
 }
 
 .menu{
-margin-top:45px;
+
 display:flex;
+
 flex-wrap:wrap;
+
 justify-content:center;
-gap:15px;
+
+gap:18px;
+
+max-width:900px;
+
+}
+.menu a{
+
+display:inline-block;
+
+padding:14px 28px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,215,0,.35);
+
+border-radius:50px;
+
+color:#ffffff;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:all .35s ease;
+
+backdrop-filter:blur(8px);
+
+}
+
+.menu a:hover{
+
+background:#ffd700;
+
+color:#07162e;
+
+transform:translateY(-4px);
+
+box-shadow:0 8px 25px rgba(255,215,0,.35);
+
+}
+
+footer{
+
+text-align:center;
+
+padding:30px 20px;
+
+font-size:15px;
+
+color:#cfcfcf;
+
+border-top:1px solid rgba(255,255,255,.12);
+
+margin-top:60px;
+
+}
+
+@media (max-width:768px){
+
+header{
+
+padding:15px 5%;
+
+}
+
+.logo span{
+
+font-size:1rem;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:2.4rem;
+
+}
+
+.hero p{
+
+font-size:1.05rem;
+
+}
+
+.menu{
+
+flex-direction:column;
+
+width:100%;
+
 }
 
 .menu a{
-text-decoration:none;
-background:white;
-color:#1e3c72;
-padding:14px 22px;
-border-radius:10px;
-font-size:18px;
-font-weight:bold;
+
+width:90%;
+
+margin:auto;
+
 }
 
-.footer{
-margin-top:70px;
-padding:20px;
-font-size:15px;
-color:#dddddd;
 }
+
 </style>
 
 </head>
-
 <body>
 
-<div class="hero">
+<header>
+
+<div class="logo">
+
+<img src="file_00000000ecd48211b81888056a1c1c0a.png" alt="MANI AMARAN Logo">
+
+<span>MANI AMARAN</span>
+
+</div>
+
+<nav>
+
+<a href="index.html">முகப்பு</a>
+
+<a href="kathaigal.html">கதைகள்</a>
+
+<a href="kavithaigal.html">கவிதைகள்</a>
+
+<a href="katturaigal.html">கட்டுரைகள்</a>
+
+<a href="puthagangal.html">புத்தகங்கள்</a>
+
+<a href="vimarsanangal.html">விமர்சனங்கள்</a>
+
+<a href="ennai-patri.html">என்னை பற்றி</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
 
 <h1>மணி அமரன்</h1>
 
-<h2>எழுத்தாளர் • கவிஞர்</h2>
+<p>எழுத்தாளர் • கவிஞர்</p>
 
-<div class="menu">
+<div class="divider"></div>
 
-<a href="kathaigal.html">📖 கதைகள்</a>
+<div class="menu">    
+    <a href="kathaigal.html">📖 கதைகள்</a>
 
-<a href="kavithaigal.html">✍️ கவிதைகள்</a>
+<a href="kavithaigal.html">📝 கவிதைகள்</a>
 
-<a href="katturaigal.html">📰 கட்டுரைகள்</a>
-<a href="puthagangal.html">📚 புத்தகங்கள்</a>
+<a href="katturaigal.html">📚 கட்டுரைகள்</a>
+
+<a href="puthagangal.html">📕 புத்தகங்கள்</a>
+
 <a href="vimarsanangal.html">⭐ விமர்சனங்கள்</a>
-<a href="ennai-patri.html">👤 என்னைப் பற்றி</a>
+
+<a href="ennai-patri.html">👤 என்னை பற்றி</a>
 
 </div>
 
-<div class="footer">
+</section> 
+    <footer>
 
-© 2026 மணி அமரன்<br><br>
+<p>© 2026 MANI AMARAN. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
 
-தமிழ் இலக்கிய இணையதளம்
+<p>தமிழ் இலக்கியம் • கவிதைகள் • கதைகள் • கட்டுரைகள்</p>
 
-</div>
-
-</div>
+</footer>
 
 </body>
+
 </html>
