@@ -227,31 +227,57 @@ max-width:900px;
 }
 .menu a{
 
-display:inline-block;
+display:flex;
 
-padding:14px 28px;
-background:rgba(255,255,255,.10);
+align-items:center;
 
-border:1.5px solid rgba(255,215,0,.55);
+justify-content:center;
+
+gap:12px;
+
+width:100%;
+
+padding:18px 28px;
+
+background:linear-gradient(180deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.05));
+
+border:2px solid rgba(255,215,0,.55);
 
 border-radius:60px;
 
-box-shadow:0 10px 25px rgba(0,0,0,.25);
+color:#ffffff;
+
+font-size:1.28rem;
+
+font-weight:600;
+
+text-decoration:none;
+
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.30),
+inset 0 1px 0 rgba(255,255,255,.18);
 
 transition:all .35s ease;
-
-backdrop-filter:blur(8px);
 
 }
 
 .menu a:hover{
 
-background:#ffd700;
+transform:translateY(-4px) scale(1.02);
 
-color:#07162e;
+background:linear-gradient(180deg,
+rgba(255,215,0,.20),
+rgba(255,255,255,.10));
 
-transform:translateY(-4px);
-box-shadow:0 12px 35px rgba(255,215,0,.55);
+border-color:#ffd700;
+
+box-shadow:
+0 14px 35px rgba(255,215,0,.35),
+0 0 18px rgba(255,215,0,.30);
 
 }
 
