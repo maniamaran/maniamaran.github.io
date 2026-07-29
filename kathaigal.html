@@ -1,16 +1,355 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
+
 <meta charset="UTF-8">
-<title>கதைகள்</title>
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>📖 கதைகள்</h1>
+<title>கதைகள் | மணி அமரன்</title>
 
-<p>மணி அமரனின் கதைகள் விரைவில் இங்கே வெளியாகும்.</p>
+<meta name="description"
+content="மணி அமரன் அவர்களின் கதைகள்">
 
-<p><a href="index.html">🏠 முகப்புப் பக்கத்திற்கு திரும்பு</a></p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Noto Serif Tamil',serif;
+background:
+linear-gradient(
+135deg,
+#07162e 0%,
+#0d2d59 50%,
+#07162e 100%
+);
+color:#fff;
+min-height:100vh;
+overflow-x:hidden;
+background-attachment:fixed;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+header{
+width:100%;
+padding:22px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(7,22,46,.78);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,215,0,.25);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:16px;
+}
+
+.logo img{
+width:56px;
+height:56px;
+border-radius:50%;
+box-shadow:0 0 15px rgba(255,215,0,.45);
+}
+
+.logo span{
+font-size:1.3rem;
+font-weight:700;
+letter-spacing:2px;
+color:#ffd700;
+}nav{
+display:flex;
+gap:24px;
+}
+
+nav a{
+color:#ffffff;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+color:#ffd700;
+}
+
+.menu-toggle{
+display:none;
+}
+
+@media (max-width:768px){
+
+header{
+padding:15px 5%;
+}
+
+.logo span{
+font-size:1rem;
+}
+
+nav{
+display:none;
+}
+
+nav.show-menu{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:80px;
+right:15px;
+background:#07162e;
+padding:12px;
+border-radius:12px;
+gap:15px;
+width:180px;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+animation:slideMenu .25s ease;
+transform-origin:top right;
+}
+
+.menu-toggle{
+display:block;
+font-size:30px;
+background:none;
+border:none;
+color:#ffd700;
+cursor:pointer;
+}
+
+}
+
+@keyframes slideMenu{
+from{
+opacity:0;
+transform:translateY(-10px) scale(.95);
+}
+to{
+opacity:1;
+transform:translateY(0) scale(1);
+  
+}main{
+width:100%;
+padding:130px 8% 70px;
+}
+
+.hero{
+text-align:center;
+margin-bottom:60px;
+}
+
+.hero h1{
+font-size:2.6rem;
+color:#ffd700;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.1rem;
+color:#dddddd;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.story-card{
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,215,0,.2);
+border-radius:18px;
+padding:25px;
+transition:.3s;
+backdrop-filter:blur(8px);
+}
+
+.story-card:hover{
+transform:translateY(-8px);
+border-color:#ffd700;
+box-shadow:0 10px 25px rgba(255,215,0,.2);
+}
+
+.story-card h2{
+color:#ffd700;
+font-size:1.3rem;
+margin-bottom:12px;
+}
+
+.story-card p{
+line-height:1.8;
+color:#eeeeee;
+}
+
+.read-btn{
+display:inline-block;
+margin-top:18px;
+padding:10px 18px;
+background:#ffd700;
+color:#07162e;
+border-radius:30px;
+font-weight:bold;
+}
+
+footer{
+margin-top:70px;
+padding:25px;
+text-align:center;
+border-top:1px solid rgba(255,255,255,.15);
+color:#cccccc;
+font-size:.95rem;
+}
+
+</style>
+  <body>
+
+<header>
+
+<div class="logo">
+
+<img src="file_00000000ecd48211b81888056a1c1c0a.png" alt="MANI AMARAN Logo">
+
+<span>MANI AMARAN</span>
+
+</div>
+
+<button class="menu-toggle">☰</button>
+
+<nav>
+
+<a href="index.html">முகப்பு</a>
+
+<a href="kathaigal.html" class="active">கதைகள்</a>
+
+<a href="kavithaigal.html">கவிதைகள்</a>
+
+<a href="katturaigal.html">கட்டுரைகள்</a>
+
+<a href="puthagangal.html">புத்தகங்கள்</a>
+
+<a href="vimarsanangal.html">விமர்சனங்கள்</a>
+
+<a href="ennai-patri.html">என்னைப் பற்றி</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<h1>கதைகள்</h1>
+
+<p>
+மனித வாழ்க்கை, உறவுகள், உணர்வுகள் மற்றும் சமூகத்தின் பல்வேறு பரிமாணங்களைப் பிரதிபலிக்கும்
+மணி அமரன் அவர்களின் சிறுகதைகள்.
+</p>
+
+</section>
+
+<section class="story-grid">
+}
+  <article class="story-card">
+
+<h2>கதை 01</h2>
+
+<p>
+இங்கே உங்கள் முதல் சிறுகதையின் சுருக்கத்தை எழுதலாம். வாசகர்களுக்கு கதையின் சாராம்சத்தை சுருக்கமாக அறிமுகப்படுத்துங்கள்.
+</p>
+
+<a href="#" class="read-btn">வாசிக்க</a>
+
+</article>
+
+
+<article class="story-card">
+
+<h2>கதை 02</h2>
+
+<p>
+இந்த இடத்தில் இரண்டாவது கதையின் சுருக்கம் இடம்பெறும். பின்னர் இந்த உரையை உங்கள் உண்மையான கதையால் மாற்றலாம்.
+</p>
+
+<a href="#" class="read-btn">வாசிக்க</a>
+
+</article>
+
+
+<article class="story-card">
+
+<h2>கதை 03</h2>
+
+<p>
+உங்கள் மூன்றாவது கதைக்கான அறிமுகத்தை இங்கே எழுதலாம். தேவைக்கேற்ப எத்தனை Story Card வேண்டுமானாலும் இதே வடிவில் சேர்க்கலாம்.
+</p>
+
+<a href="#" class="read-btn">வாசிக்க</a>
+
+</article>
+</section>
+
+<footer>
+
+<p>
+© 2026 MANI AMARAN. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.
+</p>
+
+</footer>
+
+</main>
+
+<script>
+
+const menuBtn=document.querySelector(".menu-toggle");
+const nav=document.querySelector("nav");
+
+menuBtn.addEventListener("click",(e)=>{
+e.stopPropagation();
+nav.classList.toggle("show-menu");
+});
+
+nav.addEventListener("click",(e)=>{
+e.stopPropagation();
+});
+
+document.addEventListener("click",()=>{
+nav.classList.remove("show-menu");
+});
+
+</script>
 
 </body>
 </html>
