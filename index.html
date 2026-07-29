@@ -441,7 +441,14 @@ margin:auto;
 <p>தமிழ் இலக்கியம் • கவிதைகள் • கதைகள் • கட்டுரைகள்</p>
 
 </footer>
+<script>
+const menuBtn = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
 
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("show-menu");
+});
+</script>
 </body>
 
 </html>
