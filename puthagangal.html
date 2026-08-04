@@ -197,7 +197,17 @@ transform:translateY(-8px);
 border-color:#ffd700;
 box-shadow:0 10px 25px rgba(255,215,0,.2);
 }
+.book-cover{
+width:100%;
+border-radius:12px;
+margin-bottom:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.35);
+transition:.3s;
+}
 
+.story-card:hover .book-cover{
+transform:scale(1.03);
+  }
 .story-card h2{
 color:#ffd700;
 font-size:1.3rem;
@@ -280,7 +290,9 @@ font-size:.95rem;
 <section class="story-grid">
 
 <article class="story-card">
-
+<img class="book-cover"
+src="images/மணிப்பயல் கவிதைகள்.jpg"
+alt="மணிப்பயல் கவிதைகள்">
 
 <h2>📖 மணிப்பயல் கவிதைகள்</h2>
 
@@ -300,6 +312,9 @@ font-size:.95rem;
 
 </article>
 <article class="story-card">
+<img class="book-cover"
+src="images/மாயா வனம்.jpg"
+alt="மாயா வனம்">
 
 <h2>📘 மாயா வனம்</h2>
 
@@ -321,8 +336,11 @@ font-size:.95rem;
 
 
 <article class="story-card">
+<img class="book-cover"
+src="images/தனியொரு அன்றில்.jpg"
+alt="தனியொரு அன்றில்">
 
-<h2>📙 தனியொரு அன்றில்</h2>
+<h2>📙 தனியொரு அன்றில்</h2>>
 
 <p>
 
