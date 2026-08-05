@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maniamaran.github.io/sitemap.xml
